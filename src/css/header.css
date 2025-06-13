@@ -1,0 +1,89 @@
+/* INICIO HEADER */
+header {
+    background-color: black;
+    height: 100px;
+    color: white;
+}
+
+.header__container {
+    max-width: 1140px;
+    height: 100%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    transition: transform 0.3s ease-in-out; /* Necessário */
+    display: inline-block; /* Importante para rotação funcionar corretamente */
+}
+
+.header__logo:hover {
+  transform: rotate(10deg);
+}
+.header__logo__img {
+    opacity: 0;
+    animation: fadeZoomIn 0.8s ease-out forwards;
+    max-width: 80px;
+    text-align: center;
+}
+
+@keyframes fadeZoomIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.header__menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__menu ul {
+    display: flex;
+    gap: 4rem;
+}
+
+.header__menu li {
+    list-style: none;
+}
+
+.header__menu a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: relative; /* importante para posicionar o ::after */
+  border-bottom: 5px solid transparent; /* deixa espaço para o after */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Cria a borda animada com ::after */
+.header__menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  height: 5px;
+  width: 0;
+  background-color: #B28756;
+  transition: width 0.4s ease-in-out;
+  border-radius: 2px; /* opcional, deixa a borda com cantos arredondados */
+}
+
+/* Ao passar o mouse, aumenta a largura do ::after para 100% */
+.header__menu a:hover::after,
+.header__menu .active a::after {
+  width: 100%;
+}
+
+/* Muda a cor do texto também no hover */
+.header__menu a:hover,
+.header__menu .active a {
+  color: #CCC;
+}
