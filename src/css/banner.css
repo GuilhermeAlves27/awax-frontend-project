@@ -1,0 +1,105 @@
+.banner {
+    height: calc(100vh - 100px);
+    background-color: #333;
+    background-image: url(../../assets/images/bg.jpg);
+    background-size: cover; /*Cover para ajustar o tamnho da forma que preencha todo espaço*/ 
+    background-position: bottom; /*Vamos priorizar a parte inferior da imagem*/
+    overflow: hidden;
+}
+
+
+.banner .sliders {
+    height: 100%;
+    width: 1000vw;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner .slide {
+    width: 100vw;
+    height: 100%;
+    display: inline-block; /* Fica na mesma linha que outros elementos (como inline), mas aceita largura, altura, margens e paddings (como block) */
+    /* background-color: rgba(0, 0, 0, 0.8); */
+}
+
+.banner .slidearea {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+}
+
+.banner .slidearea h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    max-width: 20ch;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.banner .slidearea .text--gradient {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background: -webkit-linear-gradient(left, #B28756, #b287562d); /*left para ser da esquerda para direita*/
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-style: italic;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    to {
+        background-position-x: -1000px;
+    }
+}
+
+.banner .slidearea p {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.banner .btn {
+    background-color: #B28756;
+    padding: 1.2rem 5rem;
+    color: #fff;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.banner .sliders__pointers {
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.banner .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+}
+
+.banner .sliders__pointers .active {
+    background-color: #B28756;
+}
