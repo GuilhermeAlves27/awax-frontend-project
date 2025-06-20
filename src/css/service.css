@@ -7,11 +7,18 @@
     text-align: center;
     border-right: 1px solid #333;
     padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;;
 }
 
 /* Efeito somente no primeiro item da lista */
 .section__service:first-child{
     border-left: 1px solid #333;
+}
+
+.section__service:hover {
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.15); /* sombra elegante */
+    transform: translateY(-5px); /* levanta 5px para cima */
 }
 
 .section__service h4 {
