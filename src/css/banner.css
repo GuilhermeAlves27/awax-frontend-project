@@ -81,6 +81,10 @@
     opacity: 0.7;
 }
 
+.banner .slideres__relative {
+    position: relative;
+}
+
 .banner .sliders__pointers {
     width: 100vw;
     height: 20px;

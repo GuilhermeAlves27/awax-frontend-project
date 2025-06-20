@@ -27,12 +27,12 @@ let slideInterval; /*guardar o intervalo do auto-play */
         });
     });
 
-    // Auto-play (troca a cada 5 segundos)
+    // Auto-play (troca a cada 2 segundos)
     function startAutoPlay() {
         slideInterval = setInterval(() => {
             currentSlide = (currentSlide + 1) % totalSlides;
             updateSlider();
-        }, 2000); // 5 segundos
+        }, 2000); // 2 segundos
     }
 
     function resetInterval() {
@@ -43,3 +43,28 @@ let slideInterval; /*guardar o intervalo do auto-play */
     // Inicialização
     updateSlider();
     startAutoPlay();
+
+// Musica
+document.addEventListener('DOMContentLoaded', function () {
+    const video = document.getElementById('meuVideo');
+    const musica = document.getElementById('minhaMusica');
+
+    video.addEventListener('play', () => {
+        // Define o tempo inicial da música para 1:19 (79 segundos)
+        if (musica.currentTime < 79) {
+            musica.currentTime = 79;
+        }
+
+        musica.play();
+    });
+
+    video.addEventListener('pause', () => {
+        musica.pause();
+    });
+
+    video.addEventListener('ended', () => {
+        musica.pause();
+        musica.currentTime = 79; // Reinicia no ponto certo, se for reproduzido novamente
+    });
+});
+

@@ -1,0 +1,82 @@
+.default {
+    padding-block: 5rem;
+}
+
+.default .section__title,
+.default .section__desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.default .section__title h1{
+    font-size: 2rem;
+}
+
+.default .section__desc p{
+    color: #CCC;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+.section__body {
+    max-width: 1140px;
+    margin-inline: auto;
+}
+
+.default.light {
+    background-color: #F7F7F7;
+}
+
+.default.light .section__title,
+.default.light .section__body {
+    color: #000;
+}
+
+.default.dark {
+    background-color: #000;
+}
+
+.default.dark .section__title,
+.default.dark .section__body {
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #B28756;
+    padding: 1.2rem 5rem;
+    color: #fff;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.section__aboutus {
+    display: flex;
+}
+
+.section__aboutus--left {
+    flex: 1;
+}
+
+.section__aboutus--left p{
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.section__aboutus--right {
+    width: 500px;
+}
+
+video {
+    box-shadow: 0px 5px 10px #333;
+    border-radius: 2.5rem;
+}
