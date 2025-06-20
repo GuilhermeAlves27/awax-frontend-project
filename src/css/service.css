@@ -1,0 +1,27 @@
+.section__services {
+    display: flex;
+}
+
+.section__service {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 1.5rem;
+}
+
+/* Efeito somente no primeiro item da lista */
+.section__service:first-child{
+    border-left: 1px solid #333;
+}
+
+.section__service h4 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.section__service p {
+    font: 1.3rem;
+    color: #999;
+    margin-top: 1rem;
+}
