@@ -65,7 +65,7 @@
     margin-bottom: 4rem;
 }
 
-.banner .btn {
+.btn {
     background-color: #B28756;
     padding: 1.2rem 5rem;
     color: #fff;
@@ -78,7 +78,7 @@
 }
 
 .btn:hover {
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 .banner .slideres__relative {
