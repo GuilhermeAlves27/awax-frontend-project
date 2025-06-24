@@ -43,21 +43,6 @@
     color: #fff;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #B28756;
-    padding: 1.2rem 5rem;
-    color: #fff;
-    border-radius: 2rem;
-    font-weight: 600;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.btn:hover {
-    opacity: 0.7;
-}
 
 .section__aboutus {
     display: flex;

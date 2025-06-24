@@ -65,21 +65,6 @@
     margin-bottom: 4rem;
 }
 
-.btn {
-    background-color: #B28756;
-    padding: 1.2rem 5rem;
-    color: #fff;
-    border-radius: 2rem;
-    font-weight: 600;
-    font-size: 1.5rem;
-    cursor: pointer;
-    text-decoration: none;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.btn:hover {
-    opacity: 0.9;
-}
 
 .banner .slideres__relative {
     position: relative;
