@@ -1,0 +1,12 @@
+.section-companies {
+    border-top:1px solid #DDD;
+    border-bottom:1px solid #DDD;
+}
+.section-companies--area {
+    display:flex;
+    align-items:center;
+}
+.section-company {
+    flex:1;
+    text-align:center;
+}
