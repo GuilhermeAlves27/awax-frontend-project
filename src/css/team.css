@@ -17,15 +17,17 @@
 }
 
 .section__team .sliders {
-    height: 100%;
-    width: 1000vw;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: all 0.3s ease-in-out;
 }
 
 .section__team .slide {
     width: 280px;
     height: 100%;
     min-height: 300px;
-    display: inline-block; /* Fica na mesma linha que outros elementos (como inline), mas aceita largura, altura, margens e paddings (como block) */
+    flex: 0 0 auto; /* garante que o slide não encolha e tenha largura fixa */
     background-color: #FFF;
     margin-right: 2rem;
 }
@@ -36,7 +38,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: #FFF;
+    color: #0c0c0c;
+    padding: 3rem;
 }
 
 .section__team--area  .slideres__relative {
@@ -61,5 +64,45 @@
 }
 
 .section__team--area  .sliders__pointers .active {
+    background-color: #B28756;
+}
+
+
+.section__team .avatar {
+    height: 150px;
+    height: auto;
+}
+
+.section__team h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-top: 3rem;
+}
+
+.section__team p {
+    font-size: 1.4rem;
+    color: #999;
+    margin-top: 0.5rem;
+}
+
+.social__media {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social__media a {
+    height: 30px;
+    width: 30px;
+    background-color: #999;
+    border-radius: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.social__media a:hover, .social__media .active {
     background-color: #B28756;
 }

@@ -36,6 +36,10 @@ html, body {
     display: inline-block;
 }
 
+.disabled-link{
+    cursor: pointer;
+}
+
 /* Efeito pulsante no hover */
 .btn:hover {
     
