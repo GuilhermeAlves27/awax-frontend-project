@@ -1,10 +1,10 @@
 // ========================
-// SLIDER GERAL (outro carrossel que usa vw)
+// SLIDER GERAL BANNER
 // ========================
 // MANTIDO COMO ESTÁ (presumo que este já esteja funcionando)
 const slidersMain = document.querySelector('.sliders');
 const pointersMain = document.querySelectorAll('.pointer');
-const totalSlides = pointersMain.length;
+const totalSlides = 3;
 let currentSlide = 0;
 let slideInterval;
 
@@ -27,10 +27,25 @@ pointersMain.forEach((pointer, index) => {
 
 function startAutoPlay() {
     slideInterval = setInterval(() => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateSlider();
-    }, 2000); // Passa o slide a cada 2 segundos
+        currentSlide++;
+
+        if (currentSlide < totalSlides) {
+            updateSlider();
+        } else {
+            // Último slide já foi mostrado, resetar para o primeiro após um pequeno delay
+            setTimeout(() => {
+                slidersMain.style.transition = 'none'; // remove transição para reset imediato
+                currentSlide = 0;
+                updateSlider();
+
+                // forçar reflow para aplicar a transição de novo no próximo loop
+                void slidersMain.offsetWidth; 
+                slidersMain.style.transition = ''; // volta a transição
+            }, 500); // delay após o último slide 
+        }
+    }, 3000); // tempo entre slides
 }
+
 
 function resetInterval() {
     clearInterval(slideInterval);
