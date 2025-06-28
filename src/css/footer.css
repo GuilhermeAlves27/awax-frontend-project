@@ -53,3 +53,20 @@ footer {
     font-size:14px;
     text-align:center;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer--area {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer--item {
+        flex: 1 1 100%;
+        max-width: 400px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}

@@ -98,3 +98,72 @@
     opacity: 1;
     pointer-events: all;
 }
+
+/* ----------- RESPONSIVIDADE ----------- */
+
+@media (max-width: 768px) {
+  .section__projects--filters {
+    padding: 0 1rem;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .section__projects--filters ul {
+    display: inline-flex;
+  }
+
+  .section__projects--filters li {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 1.1rem;
+    border-left: none;
+    border-bottom: 3px solid #EEE;
+    margin-right: 8px;
+  }
+
+  .section__projects--filters li:first-child {
+    border-left: none;
+  }
+
+  .section__projects--photos {
+    justify-content: center;
+  }
+
+  .section__projects--photo {
+    width: 45%; /* duas colunas em tablets */
+  }
+
+  .section__projects--photoarea {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__projects--filters {
+    padding: 0 0.5rem;
+  }
+
+  .section__projects--filters li {
+    font-size: 1rem;
+    padding: 6px 8px;
+    margin-right: 6px;
+  }
+
+  .section__projects--photo {
+    width: 100%; /* 1 coluna em celular */
+  }
+
+  .section__projects--photoarea {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .section__projects--photoinfo h5 {
+    font-size: 1.4rem;
+  }
+}

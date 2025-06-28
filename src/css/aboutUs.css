@@ -65,3 +65,47 @@ video {
     box-shadow: 0px 5px 10px #333;
     border-radius: 2.5rem;
 }
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+  .default .section__title h1 {
+    font-size: 1.6rem;
+  }
+
+  .default .section__desc p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .section__aboutus {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section__aboutus--left p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section__aboutus--right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .default .section__title h1 {
+    font-size: 1.4rem;
+  }
+
+  .default .section__desc p {
+    font-size: 1rem;
+  }
+
+  .section__aboutus--left p {
+    font-size: 1rem;
+  }
+
+  .default {
+    padding-block: 3rem;
+  }
+}

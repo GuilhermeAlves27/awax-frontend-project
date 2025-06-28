@@ -10,3 +10,25 @@
     flex:1;
     text-align:center;
 }
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+  .section-companies--area {
+    flex-wrap: wrap; /* Permite quebra de linha para os itens */
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .section-company {
+    flex: 0 1 45%; /* Ocupa cerca de metade da largura da tela */
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-company {
+    flex: 0 1 100%; /* Ocupa toda a largura da tela */
+    margin-bottom: 1rem;
+  }
+}

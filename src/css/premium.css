@@ -81,3 +81,56 @@
 .section-premium .pointer.active {
     background-color:#B28756;
 }
+
+/* -------- RESPONSIVIDADE -------- */
+
+@media (max-width: 768px) {
+  .section-premium .slidearea {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .section-premium--left {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .section-premium--left img {
+    width: 200px;
+    margin: 0 auto 20px auto;
+  }
+
+  .section-premium--right {
+    flex: none;
+    width: 100%;
+  }
+
+  .section-premium--item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section-premium--item img {
+    margin: 0 0 10px 0;
+  }
+
+  .section-premium--item div h4 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-premium--left img {
+    width: 150px;
+  }
+
+  .section-premium--item div h4 {
+    font-size: 14px;
+  }
+
+  .section-premium--item div {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

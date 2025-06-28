@@ -106,3 +106,65 @@
 .social__media a:hover, .social__media .active {
     background-color: #B28756;
 }
+
+/* -------- RESPONSIVIDADE -------- */
+
+@media (max-width: 768px) {
+  .section__team {
+    max-width: 100%;
+    padding-inline: 1rem;
+  }
+
+  .section__team .slide {
+    width: 220px;
+    min-height: 260px;
+    margin-right: 1.5rem;
+  }
+
+  .section__team .slidearea {
+    padding: 2rem;
+  }
+
+  .section__team h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+  }
+
+  .section__team p {
+    font-size: 1.2rem;
+  }
+
+  .section__team .avatar {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__team .slide {
+    width: 180px;
+    min-height: 220px;
+    margin-right: 1rem;
+  }
+
+  .section__team .slidearea {
+    padding: 1.5rem;
+  }
+
+  .section__team h3 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+
+  .section__team p {
+    font-size: 1rem;
+  }
+
+  .section__team .avatar {
+    height: 100px;
+  }
+
+  .social__media a {
+    height: 25px;
+    width: 25px;
+  }
+}

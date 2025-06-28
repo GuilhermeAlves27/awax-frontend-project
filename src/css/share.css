@@ -49,3 +49,17 @@
 .section-share--icon.pinterest {
     background-color:#b71c29;
 }
+
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+    .section-share {
+        justify-content: flex-start;
+        padding: 10px;
+    }
+    
+    .section-share--legend,
+    .section-share--item {
+        margin-right: 10px;
+        font-size: 11px;
+    }
+}

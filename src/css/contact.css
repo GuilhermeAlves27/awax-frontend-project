@@ -24,3 +24,30 @@
 .section-contact--split input:first-child {
     margin-right:20px;
 }
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 480px) {
+    .section-contact--split {
+        flex-direction: column;
+    }
+
+    .section-contact--split input:first-child {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .section-contact input[type=text],
+    .section-contact textarea {
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .section-contact textarea {
+        height: 80px;
+    }
+
+    .section-contact {
+        padding: 0 10px;
+    }
+}

@@ -37,3 +37,15 @@
     width:15px;
     height:auto;
 }
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .section-map--area {
+        flex-direction: column;
+        width: 60vw; /* deixa uma margem lateral nas pequenas telas */
+    }
+
+    .section-map--info {
+        width: 100%;
+        padding: 20px 15px;
+    }
+}

@@ -30,3 +30,27 @@
 .section-price--item-point {
     font-size:12px;
 }
+
+/* -------- RESPONSIVIDADE -------- */
+
+@media (max-width: 768px) {
+  .section-price {
+    flex-wrap: wrap;
+  }
+  .section-price--item {
+    flex: 0 1 48%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .section-price--item:nth-child(odd) {
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-price--item {
+    flex: 0 1 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

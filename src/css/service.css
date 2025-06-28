@@ -32,3 +32,46 @@
     color: #999;
     margin-top: 1rem;
 }
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+  .section__services {
+    flex-direction: column;
+    border-left: none;
+    border-right: none;
+  }
+
+  .section__service {
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 1rem 0;
+  }
+
+  .section__service:first-child {
+    border-left: none;
+  }
+
+  .section__service:last-child {
+    border-bottom: none;
+  }
+
+  .section__service h4 {
+    font-size: 1.3rem;
+    margin-top: 1.2rem;
+  }
+
+  .section__service p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section__service h4 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+  }
+
+  .section__service p {
+    font-size: 1rem;
+  }
+}

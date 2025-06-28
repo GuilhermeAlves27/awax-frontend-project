@@ -92,3 +92,147 @@
 .banner .sliders__pointers .active {
     background-color: #B28756;
 }
+
+.banner {
+    height: calc(100vh - 100px);
+    background-color: #333;
+    background-image: url(../../assets/images/bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+
+.banner .sliders {
+    height: 100%;
+    width: 1000vw;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.banner .slide {
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+}
+
+.banner .slidearea {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #FFF;
+    padding: 0 20px; /* Evita que o conteúdo grude nas bordas em telas pequenas */
+    text-align: center;
+}
+
+.banner .slidearea h1 {
+    font-size: 6rem;
+    font-weight: bold;
+    max-width: 20ch;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.banner .slidearea .text--gradient {
+    font-size: 6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background: -webkit-linear-gradient(left, #B28756, #b287562d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-style: italic;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    to {
+        background-position-x: -1000px;
+    }
+}
+
+.banner .slidearea p {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.banner .slideres__relative {
+    position: relative;
+}
+
+.banner .sliders__pointers {
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.banner .pointer {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+}
+
+.banner .sliders__pointers .active {
+    background-color: #B28756;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 1024px) {
+  .banner .slidearea h1,
+  .banner .slidearea .text--gradient {
+    font-size: 4.5rem;
+  }
+
+  .banner .slidearea p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner .slidearea h1,
+  .banner .slidearea .text--gradient {
+    font-size: 3rem;
+  }
+
+  .banner .slidearea p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .banner .sliders__pointers {
+    margin-top: -30px;
+    gap: 0.5rem;
+  }
+
+  .banner .pointer {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner .slidearea h1,
+  .banner .slidearea .text--gradient {
+    font-size: 2.2rem;
+  }
+
+  .banner .slidearea p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .banner .pointer {
+    width: 10px;
+    height: 10px;
+  }
+}
